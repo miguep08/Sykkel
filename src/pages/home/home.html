@@ -1,14 +1,49 @@
+<!--
+ Generated template for the ForcrecatPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Panithikhar Sykkel
     </ion-title>
   </ion-navbar>
 </ion-header>
+-->
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <h1 id="Titulo">PANITHIKHAR SYKKEL</h1>
+        <div class="caja">
+            <ion-list>
+                <!-- Validacion campo NOmbre -->
+                <ion-item>
+                    <ion-label  stacked>Username</ion-label>
+                    <ion-input type="text" value=""></ion-input>
+                </ion-item>
+
+                <!-- Validacion campo Destalles -->
+                <ion-item>
+                    <ion-label stacked>Password</ion-label>
+                    <ion-input type="password"></ion-input>
+                </ion-item>
+            </ion-list>
+            <ion-grid class="centrar">
+                <ion-row>
+                    <ion-col>
+                        <button class="Btn" ion-button color="danger">Iniciar Sesión &nbsp; <ion-icon ios="ios-bicycle" md="md-bicycle"></ion-icon>
+                        </button>
+                        
+                        <button class="Btn" ion-button color="secondary" (click)="irRegistro()">Registrarse &nbsp;  <ion-icon ios="ios-contacts" md="md-contacts"></ion-icon></button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+
+
+        <p>
+            Olvide mi contraseña<a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+        </p>
 </ion-content>

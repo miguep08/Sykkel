@@ -1,3 +1,18 @@
 page-home {
-
+    #Titulo {
+        font-family: LaRoja;
+        text-align: center;
+    }
+    
+    .Btn{
+        font-family: ElAzul;
+    }
+    .centrar{
+        margin: 0 auto;
+        width: 70%;
+    }
+    
+    .caja{
+        background: url(../../assets/imgs/logo.png);
+    }
 }
