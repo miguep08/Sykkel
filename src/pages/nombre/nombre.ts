@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {HomePage} from '../home/home';
+import {AlertController} from 'ionic-angular';
 
 /**
  * Generated class for the NombrePage page.
@@ -10,16 +12,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-nombre',
-  templateUrl: 'nombre.html',
+    selector: 'page-nombre',
+    templateUrl: 'nombre.html',
 })
 export class NombrePage {
+    username;
+    constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
+        this.username = this.navParams.get("username");
+        console.table(this.username);
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NombrePage');
-  }
+    }
+    iewDidLoad() {
+        console.log('ionViewDidLoad NombrePage');
+    }
 
 }
