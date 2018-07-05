@@ -26,4 +26,12 @@ export class NombrePage {
         console.log('ionViewDidLoad NombrePage');
     }
 
+    presentAlert(titulo, mensaje) {
+        let alert = this.alertCtrl.create({
+            title: titulo,
+            subTitle: mensaje,
+            buttons: ['Cerrar']
+        });
+        alert.present();
+    }
 }

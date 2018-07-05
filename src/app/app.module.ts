@@ -11,6 +11,7 @@ import {TablaPage} from '../pages/tabla/tabla';
 import {RegistroPage} from '../pages/registro/registro';
 import {ForcrepoPage} from '../pages/forcrepo/forcrepo';
 import {ConectarseProvider} from '../providers/conectarse/conectarse';
+import {NombrePage} from '../pages/nombre/nombre';
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import {ConectarseProvider} from '../providers/conectarse/conectarse';
         HomePage,
         RegistroPage,
         TablaPage,
-        ForcrepoPage
+        ForcrepoPage,
+        NombrePage
     ],
     imports: [
         BrowserModule,
@@ -30,7 +32,8 @@ import {ConectarseProvider} from '../providers/conectarse/conectarse';
         HomePage,
         RegistroPage,
         TablaPage,
-        ForcrepoPage
+        ForcrepoPage,
+        NombrePage
     ],
     providers: [
         StatusBar,
