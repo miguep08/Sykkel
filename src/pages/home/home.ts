@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {RegistroPage} from '../registro/registro';
 import {AlertController} from 'ionic-angular';
-import {ConectarswProvider} from '../../providers/conectarsw/conectarsw';
+import {ConectarseProvider} from '../../providers/conectarse/conectarse';
 import {LoadingController} from 'ionic-angular';
 import {NombrePage} from '../nombre/nombre';
 @Component({
@@ -11,7 +11,7 @@ import {NombrePage} from '../nombre/nombre';
 })
 export class HomePage {
 
-    constructor(public navCtrl: NavController) {
+    constructor(public navCtrl: NavController, private alertCtrl:AlertController) {
 
     }
     irRegistro() {
@@ -53,28 +53,10 @@ export class HomePage {
         });
         alert.present();
     }
-
-    verificar(datosUser) {
-        if (datosUser.username == "" || datosUser.clave == "") {
-            this.presentAlert("Error #1 ", "Hay que llenar los campos solicitados");
-        } else {
-            let loader = this.loading.create({
-                content: "<b>Se está procesando la solicitud</b>"
-            });
-            loader.present();
-
-            let estado = this.conecta.ingreso(datosUser);
-            estado.subscribe(data => {
-                console.table(data);
-                this.navCtrl.setRoot(NombrePage, {usuario: data[0]});
-                loader.dismiss();
-            }, err => {
-                console.table(err);
-                loader.dismiss();
-            })
-        }
+    
+    verificar(data){
+        
     }
-
 
     presentAlert(titulo, mensaje) {
         let alert = this.alertCtrl.create({
@@ -83,5 +65,9 @@ export class HomePage {
             buttons: ['Cerrar']
         });
         alert.present();
+    }
+    
+    funcion(){
+        
     }
 }
